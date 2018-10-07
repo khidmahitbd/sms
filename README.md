@@ -1,6 +1,13 @@
-### COREUI with django ###
-CoreUI: http://coreui.io/
-> Reference to ChartJS and also initialization of charts are commented out at main.js, as they are generating some reference error. Chart initializations are commented out both in dist and src. 
+### Khidmah School, Created by KhidmahIT
+
+include all of your code in 
+
+```
+{% block  content %}
+
+{% endblock %}
+``` 
+place your menu in sidebar.html
 
 
 
