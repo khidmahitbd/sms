@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+    <h2>Cheke result Page
+    </h2>
+    <form class="" action="" method="post">
+        {% csrf_token %}
+        {{forms.as_p}}
+        <input type="submit" value="Submit">
+
+
+    </form>
+
+
+
+    
+    
+    <h1>Result is</h1>
+    <br>
+    <br>
+
+    <h2> 
+        <p>Name : {{name}}</p>
+         <p>Roll : {{roll}}</p>
+         <p>Class:{{class}}</p>
+         <p>subject:{{subject}}</p>
+         <p>marks:{{marks}}</p>
+    </h2>
+
+  
+
+    {% endblock %}

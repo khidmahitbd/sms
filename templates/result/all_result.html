@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class = "table">
+<tr>
+        <td>Name</td>
+        <td>Roll</td>
+        <td>Class</td>
+        <td>Action</td>
+  
+    </tr>
+
+{% for result in resultlist %}
+<tr>
+    <td>{{result.std_name}}</td>
+    <td>{{result.std_roll}}</td>
+    <td>{{result.std_class}}</td>
+    <td>
+     <a class="btn btn-danger" href="{% url 'delete_result_urls' result.id %}">Delete</a>
+     <a class="btn btn-success" href="{% url 'edit_result_urls' result.id %}">Edit</a>
+    </td>
+
+</tr>
+{% endfor %}
+</table>
+<a class="btn btn-warning" href="{% url 'create_result_url'%}">Create</a>
+
+
+
+{% endblock %}

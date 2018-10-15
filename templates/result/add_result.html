@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Add  result page</h2>
+
+<hr>
+    <form class="" action="" method="post">
+
+        {% csrf_token %}
+        {{forms.as_p}}
+
+        <input type="submit" value="Save">
+
+        <a class="float-right btn btn-info"href="{% url 'all_result_url'%}">All Result </a>
+
+    </form>
+
+    {% endblock %}
