@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All subjects of our schools</h1>
+    <table class="">
+
+        <tr>
+            <th>Subject name</th>
+            <th>Class name</th>
+        </tr>
+
+        {% for i in sub_list %}
+            <tr>               
+                <td>{{i.subject}}</td>
+                <td>{{i.clsss_name}}</td>
+            </tr>
+        {% endfor %}
+
+
+
+    </table>
+</body>
+</html>
