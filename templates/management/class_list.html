@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    {% extends 'home.html' %}
+    {% block  content %}
+
+    
     <h1>All classes of our schools</h1>
     <table class="">
 
@@ -21,7 +25,7 @@
         {% endfor %}
 
 
-
+    {% endblock %}
     </table>
 </body>
 </html>
