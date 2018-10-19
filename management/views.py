@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ClassForm, SubjectForm
 from .models import StudentClass, Subject
 
@@ -10,9 +10,10 @@ def class_name(request):
         forms = ClassForm(request.POST)
         if forms.is_valid():
 
-            forms.save()    
+            cls_name = forms.cleaned_data['class_name']
 
-
+            StudentClass.objects.create(class_name = cls_name)
+            return redirect('class_list')
     forms = ClassForm()
     context = {'form':forms}
     return render(request, 'management/class_name.html', context)
@@ -29,8 +30,13 @@ def subject(request):
     if request.method == 'POST':
         forms = SubjectForm(request.POST)
         if forms.is_valid():
-
             forms.save()
+
+            subject = forms.cleaned_data['subject']
+            class_name = forms.cleaned_data['class_name']
+
+            StudentClass.objects.create(subject='subject', class_name= 'class_name')
+            return redirect('subject_list')
 
 
     forms = SubjectForm()

@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
     {% extends 'home.html' %}
     {% block  content %}
-    <h1>All subjects of our schools</h1>
-    <table class="">
+    <h1 style = "text-align: center; background-color: aquamarine">All subjects of our schools</h1>
+    <table class="table table-dark table-hover table-stripped">
 
         <tr>
-            <th>Subject name</th>
-            <th>Class name</th>
+            <th style = "text-align: center;" bgcolor = 'green'><h4>Class name</h4></th>
+            <th style = "text-align: center;" bgcolor = 'red' ><h4>Subject name</h4></th>
         </tr>
 
         {% for i in sub_list %}
-            <tr>               
-                <td>{{i.subject}}</td>
-                <td>{{i.clsss_name}}</td>
+            <tr>
+                <td bgcolor = 'red'>{{i.class_name}}</td>            
+                <td bgcolor = 'green'>{{i.subject}}</td>
+                
             </tr>
         {% endfor %}
+        <th>
+            <a href="{% url 'add_subject' %}"><button type="button" class="btn btn-outline-warning btn-lg under">Add subject</button></a>
+        </th>
 
     {% endblock %}
 
     </table>
 </body>
 </html>
+
+
+
+

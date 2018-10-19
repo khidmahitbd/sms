@@ -9,13 +9,15 @@
 <body>
     {% extends 'home.html' %}
     {% block  content %}
-    <h1>Subject List</h1>
+    <div class="container col-lg-6">
+    <h3>Subject List</h3>
     
     <form action = "" method ='Post'>
         {% csrf_token %}
         {{ form.as_p }}
         <p><input type="submit" value="Save"></p>
     </form>
+    </div>
     {% endblock %}
 </body>
 </html>

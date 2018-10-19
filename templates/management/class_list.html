@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
+
     {% extends 'home.html' %}
     {% block  content %}
+    <div>
+        <h1 style = "text-align: center; background-color: aqua">All classes of our schools</h1>
+        <table class="table table-dark table-hover table-stripped">
 
-    
-    <h1>All classes of our schools</h1>
-    <table class="">
-
-        <tr>
-            <th>Class name</th>
-        </tr>
-
-        {% for i in c_list %}
             <tr>
-            <td>{{i.class_name}}</td>
+                <th style = "text-align: center;" bgcolor = 'red'><h3>Class name list</h3></th>
             </tr>
-        {% endfor %}
-
-
+            {% for i in c_list %}
+                <tr>
+                <td bgcolor = 'blue'>{{i.class_name}}</td>
+                
+                </tr>
+            {% endfor %}
+    </div>
+    <th>
+        <a href="{% url 'add_class' %}"><button type="button" class="btn btn-outline-warning btn-lg under">Add class</button></a>
+    </th>
     {% endblock %}
+        
+    
     </table>
 </body>
 </html>

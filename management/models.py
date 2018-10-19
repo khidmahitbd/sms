@@ -12,8 +12,9 @@ class StudentClass(models.Model):
 
 class Subject(models.Model):
 
-    clsss_name = models.ForeignKey(StudentClass,on_delete= models.CASCADE)
-    subject = models.CharField(max_length = 16)
+    
+    subject = models.CharField(max_length = 30)
+    class_name = models.ForeignKey(StudentClass,on_delete= models.CASCADE)
     
     
     def __str__(self):
