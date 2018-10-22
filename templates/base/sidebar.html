@@ -4,10 +4,13 @@
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}"><i class="icon-speedometer"></i> Dashboard</a>
+                <a class="nav-link" href="{% url 'class_list' %}"><i class="icon-speedometer"></i> Class List</a>
+                <a class="nav-link" href="{% url 'subject_list' %}"><i class="icon-speedometer"></i> Subject List</a>
             </li>
         </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+
 
     {% block sidebar %}
     {% endblock %}
