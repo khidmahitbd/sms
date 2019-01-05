@@ -1,7 +1,7 @@
 # Khidmah School, Created by KhidmahIT
 ### Use of GIT
 first clone repository   
-``` git clone https://github.com/harunurkst/coreui-django-boilerplate.git```
+``` https://github.com/khidmahitbd/sms.git```
 switch to sprint_01 branch   
 ```
 git checkout sprint_01
